@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu');
+
+/* SITE/MULTIPLE ELEMENTS */
+body {
+  padding-top: 50px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #000;
+}
+
+  /* VERSION BRAND STYLES */
+.navbar-brand {
+  color: #fff;
+}
+.navbar-brand:hover {
+  color: #fff;
+}
+
+  /* NAVIGATION LINKS */
+.nav > li > a {
+  color: #fff;
+}
+
+.nav > li > a:hover {
+  color: #ff0000;
+  background-color: #000;
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+  background: #000 url("../images/header-bg2.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+}
