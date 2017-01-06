@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9] -->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!-- [endif] -->
 </head>
 
 <body>
@@ -28,16 +28,15 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
           </button>
-                <a class="navbar-brand" href="index.html">AURORA</a>
+                <a href="index.html" class="navbar-brand aurora">AURORA</a>
             </div>
             <!-- NAV LINKS -->
             <div class="collapse navbar-collapse" id="mobile-menu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Resume</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -47,29 +46,40 @@
     <header id="home">
         <div class="header-container">
             <div class="header-cell">
-              <h1>I'M JOSHUA NELSON</h1>
+              <h1>I AM, JOSHUA NELSON</h1>
               <hr />
               <h3>WEB DEVELOPER</h3>
             </div>
         </div>
     </header>
 
+    <!-- ABOUT SECTION -->
     <section id="about">
-
+      <div class="container lg-padding">
+        <div class="row">
+          <div class="col-md-4 black">
+            <img src="images/me.jpg" alt="Joshua" />
+          </div>
+          <div class="col-md-8 lg-padding">
+            <h2 class="page-header">About Me</h2>
+            <p>I'm a United States Air Force veteran and recent graduate from Liberty University where I obtained a Bachelor of Science in Appled Web Technologies. I know what it takes to accomplished the tasks set before me; dedication, passion, and long hours. I love the feeling of being able to create something using lines of code and Photoshop.</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section id="skills">
 
     </section>
 
-    <section id="resume">
-
-    </section>
-
+    <!-- CONTACT SECTION -->
     <section id="contact">
 
     </section>
 
+    <!-- FOOTER -->
     <footer>
 
     </footer>
@@ -78,6 +88,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+      <!-- LETTERING.JS USED FOR AURORA TEXT ANIMATION -->
+    <script src="js/jquery.lettering-0.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".aurora").lettering();
+        });
+    </script>
 </body>
 
 </html>

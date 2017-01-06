@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu');
 
+
+
 /* SITE/MULTIPLE ELEMENTS */
 body {
   padding-top: 50px;
+}
+
+p {
   font-family: 'Ubuntu', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.8em;
 }
 
 nav, h1, h2, h3, h4, h5, h6 {
@@ -36,7 +43,7 @@ nav {
 /* HEADER */
 header {
   height: 100vh;
-  background: #000 url("../images/header-bg2.jpg") no-repeat center;
+  background: #000 url("../images/header-bg.jpg") no-repeat center;
   background-size: cover;
   color: #fff;
 }
@@ -63,3 +70,126 @@ header hr {
 }
 
 /* ABOUT SECTION */
+#about img {
+  display: block;
+  margin: auto;
+}
+
+/* HELPER CLASSES */
+.lg-padding {
+  padding: 50px;
+}
+
+.md-padding {
+  padding: 30px;
+}
+
+.sm-padding {
+  padding: 15px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.black {
+  background-color: black;
+}
+
+/* AURORA TEXT ANIMATION */
+/* USES LETTERING.JS FOR LETTER SEPARATION */
+
+.aurora {
+    color: white;
+    letter-spacing: 2.4px;
+}
+
+.aurora:hover span:nth-of-type(1) {
+    animation: fun-1 5s 0.02s 1 alternate;
+}
+
+.aurora:hover span:nth-of-type(2) {
+    animation: fun-2 5s 0.04s 1 alternate;
+}
+
+.aurora:hover span:nth-of-type(3) {
+    animation: fun-3 5s 0.06s 1 alternate;
+}
+
+.aurora:hover span:nth-of-type(4) {
+    animation: fun-4 5s 0.08s 1 alternate;
+}
+
+.aurora:hover span:nth-of-type(5) {
+    animation: fun-5 5s 0.1s 1 alternate;
+}
+
+.aurora:hover span:nth-of-type(6) {
+    animation: fun-6 5s 0.2s 1 alternate;
+}
+
+@-webkit-keyframes fun-1 {
+    from {
+        text-shadow: 0 0 3px #cc6600;
+        color: transparent;
+    }
+    to {
+        text-shadow: 0;
+        color: #white;
+    }
+}
+
+@-webkit-keyframes fun-2 {
+    from {
+        text-shadow: 0 0 5px #ff8000;
+        color: transparent;
+    }
+    to {
+        text-shadow: 0;
+        color: white;
+    }
+}
+
+@-webkit-keyframes fun-3 {
+    from {
+        text-shadow: 0 0 3px #3333ff;
+        color: transparent;
+    }
+    to {
+        text-shadow: 0;
+        color: white;
+    }
+}
+
+@-webkit-keyframes fun-4 {
+    from {
+        text-shadow: 0 0 6px #884dff;
+        color: transparent;
+    }
+    to {
+        text-shadow: 0;
+        color: white;
+    }
+}
+
+@-webkit-keyframes fun-5 {
+    from {
+        text-shadow: 0 0 5px #70db70;
+        color: transparent;
+    }
+    to {
+        text-shadow: 0;
+        color: white;
+    }
+}
+
+@-webkit-keyframes fun-6 {
+    from {
+        text-shadow: 0 0 6px #66ff33;
+        color: transparent;
+    }
+    to {
+        text-shadow: 0;
+        color: white;
+    }
+}
