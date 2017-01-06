@@ -23,9 +23,6 @@ nav {
 }
 
   /* VERSION BRAND STYLES */
-.navbar-brand {
-  color: #fff;
-}
 .navbar-brand:hover {
   color: #fff;
 }
@@ -53,6 +50,10 @@ header h1 {
   font-weight: 600;
 }
 
+header h3 {
+  letter-spacing: 0.8em;
+}
+
 header hr {
   width: 40%;
 }
@@ -75,7 +76,38 @@ header hr {
   margin: auto;
 }
 
+#about div:nth-of-type(2) {
+  padding-top: 25px;
+}
+
+.btn-danger {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-danger:hover {
+  background-color: #000;
+  color: #ff0000;
+  transition: ease-in-out 1.0s;
+  -webkit-transition: 1.0 ease-in-out;
+}
+
 /* HELPER CLASSES */
+.hv-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-border {
+  border: 10px double #fff;
+}
+
 .lg-padding {
   padding: 50px;
 }
@@ -98,98 +130,97 @@ header hr {
 
 /* AURORA TEXT ANIMATION */
 /* USES LETTERING.JS FOR LETTER SEPARATION */
-
 .aurora {
-    color: white;
+    color: #fff;
     letter-spacing: 2.4px;
 }
 
 .aurora:hover span:nth-of-type(1) {
-    animation: fun-1 5s 0.02s 1 alternate;
+    animation: color-1 5s 0.02s 1 alternate;
 }
 
 .aurora:hover span:nth-of-type(2) {
-    animation: fun-2 5s 0.04s 1 alternate;
+    animation: color-2 5s 0.04s 1 alternate;
 }
 
 .aurora:hover span:nth-of-type(3) {
-    animation: fun-3 5s 0.06s 1 alternate;
+    animation: color-3 5s 0.06s 1 alternate;
 }
 
 .aurora:hover span:nth-of-type(4) {
-    animation: fun-4 5s 0.08s 1 alternate;
+    animation: color-4 5s 0.08s 1 alternate;
 }
 
 .aurora:hover span:nth-of-type(5) {
-    animation: fun-5 5s 0.1s 1 alternate;
+    animation: color-5 5s 0.1s 1 alternate;
 }
 
 .aurora:hover span:nth-of-type(6) {
-    animation: fun-6 5s 0.2s 1 alternate;
+    animation: color-6 5s 0.2s 1 alternate;
 }
 
-@-webkit-keyframes fun-1 {
+@-webkit-keyframes color-1 {
     from {
         text-shadow: 0 0 3px #cc6600;
         color: transparent;
     }
     to {
         text-shadow: 0;
-        color: #white;
+        color: #fff;
     }
 }
 
-@-webkit-keyframes fun-2 {
+@-webkit-keyframes color-2 {
     from {
         text-shadow: 0 0 5px #ff8000;
         color: transparent;
     }
     to {
         text-shadow: 0;
-        color: white;
+        color: #fff;
     }
 }
 
-@-webkit-keyframes fun-3 {
+@-webkit-keyframes color-3 {
     from {
         text-shadow: 0 0 3px #3333ff;
         color: transparent;
     }
     to {
         text-shadow: 0;
-        color: white;
+        color: #fff;
     }
 }
 
-@-webkit-keyframes fun-4 {
+@-webkit-keyframes color-4 {
     from {
         text-shadow: 0 0 6px #884dff;
         color: transparent;
     }
     to {
         text-shadow: 0;
-        color: white;
+        color: #fff;
     }
 }
 
-@-webkit-keyframes fun-5 {
+@-webkit-keyframes color-5 {
     from {
         text-shadow: 0 0 5px #70db70;
         color: transparent;
     }
     to {
         text-shadow: 0;
-        color: white;
+        color: #fff;
     }
 }
 
-@-webkit-keyframes fun-6 {
+@-webkit-keyframes color-6 {
     from {
         text-shadow: 0 0 6px #66ff33;
         color: transparent;
     }
     to {
         text-shadow: 0;
-        color: white;
+        color: #fff;
     }
 }
