@@ -18,10 +18,10 @@
     <!-- [endif] -->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-nav">
 
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-fixed-top">
+    <nav id="main-nav" class="navbar navbar-fixed-top">
         <div class="container">
             <!-- NAV HEADER/VERSION BRAND/MOBILE BUTTON -->
             <div class="navbar-header">
@@ -57,21 +57,49 @@
     <section id="about">
       <div class="container lg-padding">
         <div class="row">
-          <div class="col-md-4 black img-border">
+          <div class="col-md-4 bg-black img-border">
             <img src="images/me.jpg" alt="Joshua" />
           </div>
           <div class="col-md-offset-1 col-md-7">
             <h2 class="page-header">About Me</h2>
-            <p>I'm a United States Air Force veteran and recent graduate from Liberty University where I obtained a Bachelor of Science in Applied Web Technologies. I love being able to create something through code, however, there is no denying the difficulty involved. But with dedication, passion, and hard work, I can accomplish any task set before me.</p>
-            <button type="button" name="button" class="btn btn-danger btn-lg">Download Resume</button>
+            <p>I'm a United States Air Force veteran and recent graduate from Liberty University where I obtained a Bachelor of Science in Applied Web Technologies. I love being able to bring something to fruition through code, however, there is no denying the trials sometimes involved. But with dedication, passion, and hard work, I will accomplish any task set before me.</p>
+            <a href="files/resume.pdf" class="btn btn-danger btn-lg">Download Resume</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="skills">
-
+    <section id="skills" class="bg-black">
+      <div class="container lg-padding">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="page-header">Skills</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <img class="center-block" src="images/icons/Code-64.png" alt="Languages" />
+            <h5>Languages</h5>
+            <p>HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, Java</p>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <img class="center-block" src="images/icons/Outline-64.png" alt="Frameworks / APIs" />
+            <h5>Frameworks/APIs</h5>
+            <p>Bootstrap, Materialize, AngularJS, Firebase</p>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <img class="center-block" src="images/icons/Maintenance-64.png" alt="Tools" />
+            <h5>Tools</h5>
+            <p>Atom Editor, GitHub, Photoshop, Console</p>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <img class="center-block" src="images/icons/Server-64.png" alt="Environments" />
+            <h5>Environments</h5>
+            <p>VPS Deployment, Linux, Windows, MacOS</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT SECTION -->
@@ -81,7 +109,7 @@
 
     <!-- FOOTER -->
     <footer>
-
+      <a href="https://icons8.com">Icon pack by Icons8</a>
     </footer>
 
     <!-- SCRIPTS -->
@@ -91,9 +119,39 @@
       <!-- LETTERING.JS USED FOR AURORA TEXT ANIMATION -->
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".aurora").lettering();
+    $(document).ready(function() {
+        $(".aurora").lettering();
+    });
+
+    $(document).ready(function() {
+        // Add scrollspy to <body>
+        $('body').scrollspy({
+            target: ".navbar",
+            offset: 50
         });
+
+        // Add smooth scrolling on all links inside the navbar
+        $("#main-nav a").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
     </script>
 </body>
 
