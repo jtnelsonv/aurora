@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu|News+Cycle');
 
 
 
@@ -7,13 +7,13 @@ body {
   padding-top: 50px;
 }
 
-p {
+p, input, textarea {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.2em;
   line-height: 2em;
 }
 
-nav, h1, h2, h3, h4, h5, h6, dd, dt {
+nav, h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -22,12 +22,12 @@ nav {
   background-color: #000;
 }
 
-  /********* VERSION BRAND STYLES *********/
+  /* --- VERSION BRAND STYLES --- */
 .navbar-brand:hover {
   color: #fff;
 }
 
-  /********* NAVIGATION LINKS *********/
+  /*---  NAVIGATION LINKS --- */
 .nav > li > a {
   color: #fff;
 }
@@ -44,7 +44,17 @@ nav {
   background-color: #000;
 }
 
-/********* HEADER *********/
+.mobile-ham {
+  color: #fff;
+}
+
+.mobile-ham:hover {
+  color: #ff0000;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+/********* HEADER SECTION *********/
 header {
   height: 100vh;
   background: #000 url("../images/header-bg.jpg") no-repeat center fixed;
@@ -64,7 +74,7 @@ header h3 {
 header hr {
   width: 40%;
 }
-  /********* HEADER TEXT PLACEMENT *********/
+  /*---  HEADER TEXT PLACEMENT --- */
 .header-container {
   display: table;
   width: 100%;
@@ -99,7 +109,7 @@ header hr {
 }
 
 /********* SKILLS SECTION *********/
-#skills h2, h5{
+#skills h5 {
   color: #fff;
   text-align: center;
   margin-top: 0px;
@@ -116,16 +126,80 @@ header hr {
   padding: 15px 30px 0px 30px;
 }
 
-/********* RESUME TIMELINE SECTION *********/
+/********* EXPERIENCE SECTION *********/
 #experience {
   background: #fff;
 }
 
-.boxshadow {
-  background: #fff;
-  box-shadow: #999 1px 1px 10px;
+
+/********* QUOTE SECTION *********/
+#quotes {
+  height: 350px;
+  color: #fff;
 }
 
+#quotes hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+/********* CONTACT SECTION *********/
+#contact input, textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: none;
+  border-bottom: #000 solid 2px;
+  transition: border 0.3s;
+}
+
+#contact input:focus, textarea:focus {
+  border-bottom: #ff0000 solid 2px;
+  outline: none;
+}
+
+/********* FOOTER *********/
+#footer {
+  padding-top: 10px;
+}
+
+#footer p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+/********* HELPER CLASSES *********/
+.inline-block {
+  display: inline-block;
+}
+
+.img-border {
+  border: 10px double #fff;
+}
+
+.lg-padding {
+  padding: 50px 30px 50px 30px;
+}
+
+.md-padding {
+  padding: 30px 15px 30px 15px;
+}
+
+.bottom-margin {
+  margin-bottom: 35px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+/********* TIMELINE *********/
 .timeline {
     list-style: none;
     padding: 20px 0 20px;
@@ -173,6 +247,7 @@ header hr {
             left: 3.5em;
             width: 95%;
             padding: 20px;
+            background: #fff;
             border: 1px solid #d4d4d4;
             border-radius: 2px;
             -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
@@ -186,7 +261,7 @@ header hr {
                 right: auto;
                 display: inline-block;
                 border-top: 15px solid transparent;
-                border-left: 0 solid #ccc;
+                border-left: 0;
                 border-right: 15px solid #ccc;
                 border-bottom: 15px solid transparent;
                 content: " ";
@@ -198,7 +273,7 @@ header hr {
                 left: -14px;
                 display: inline-block;
                 border-top: 14px solid transparent;
-                border-left: 0 solid #fff;
+                border-left: 0;
                 border-right: 14px solid #fff;
                 border-bottom: 14px solid transparent;
                 content: " ";
@@ -219,30 +294,12 @@ header hr {
             border-radius: 50%;
         }
 
-        .timeline > li.timeline-inverted > .timeline-panel {
-            float: right;
-        }
-
-            .timeline > li.timeline-inverted > .timeline-panel:before {
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
-                right: auto;
-            }
-
-            .timeline > li.timeline-inverted > .timeline-panel:after {
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
-                right: auto;
-            }
-
 .timeline-badge.primary {
     background-color: #2e6da4 !important;
 }
 
 .timeline-badge.success {
-    background-color: #3f903f !important;
+    background-color: #33cc33 !important;
 }
 
 .timeline-badge.warning {
@@ -304,58 +361,8 @@ header hr {
         }
 }
 
-
-/********* HELPER CLASSES *********/
-.hv-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.v-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.img-border {
-  border: 10px double #fff;
-}
-
-.lg-padding {
-  padding: 50px;
-}
-
-.md-padding {
-  padding: 30px;
-}
-
-.sm-padding {
-  padding: 15px;
-}
-
-.bottom-margin {
-  margin-bottom: 35px;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.bg-black {
-  background-color: black;
-}
-
-.bg-lightgrey {
-  background-color: lightgrey;
-}
-
 /********* AURORA TEXT ANIMATION *********/
-/* USES LETTERING.JS FOR LETTER SEPARATION */
+/*---  USES LETTERING.JS FOR LETTER SEPARATION --- */
 .aurora {
     color: #fff;
     letter-spacing: 2.4px;
