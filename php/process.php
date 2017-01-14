@@ -3,8 +3,8 @@
 	$email = $_POST["email"];
 	$message = $_POST["message"];
 
-	$emailTo = "contact@joshuanelson.me";
-	$subject = "New Contact Form Message";
+	$EmailTo = "contact@joshuanelson.me";
+	$Subject = "New Contact Form Message";
 
 	$body .= "Name: ";
 	$body .= $name;
@@ -19,7 +19,7 @@
 	$body .= "\n";
 
 	//Send email
-	$success = mail($emailTo, $subject, $body, "From:".$email);
+	$success = mail($EmailTo, $Subject, $body, "From:".$email);
 
 	//Redirect to success page
 	if ($success) {
@@ -27,5 +27,5 @@
 	} else {
 		echo "invalid";
 	}
-	
+
  ?>
