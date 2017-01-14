@@ -145,7 +145,7 @@ header hr {
 }
 
 /********* CONTACT SECTION *********/
-#contact input, textarea {
+.formstyle {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
@@ -155,7 +155,7 @@ header hr {
   transition: border 0.3s;
 }
 
-#contact input:focus, textarea:focus {
+.formstyle:focus {
   border-bottom: #ff0000 solid 2px;
   outline: none;
 }
