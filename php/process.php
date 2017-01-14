@@ -1,10 +1,30 @@
 <?php
-	$name = $_POST["name"];
-	$email = $_POST["email"];
-	$message = $_POST["message"];
+$errorMsg = ""; //Variable for error messages
 
-	$EmailTo = "contact@joshuanelson.me";
-	$Subject = "New Contact Form Message";
+//Name
+if(empty($_POST["name"])) {
+	$errorMsg = "Your name is required.";
+} else {
+	$name = $_POST["name"];
+}
+
+//Email
+if(empty($_POST["email"])) {
+	$errorMsg = "A valid email is required.";
+} else {
+	$email = $_POST["email"];
+}
+
+//Message
+if(empty($_POST["message"])) {
+	$errorMsg = "Please include a message.";
+} else {
+	$message = $_POST["message"];
+}
+
+//Email info and formatting
+	$emailTo = "contact@joshuanelson.me";
+	$subject = "New Contact Form Message";
 
 	$body .= "Name: ";
 	$body .= $name;
@@ -19,13 +39,17 @@
 	$body .= "\n";
 
 	//Send email
-	$success = mail($EmailTo, $Subject, $body, "From:".$email);
+	$success = mail($emailTo, $subject, $body, "From:".$email);
 
 	//Redirect to success page
-	if ($success) {
+	if ($success && $errorMsg == "") {
 		echo "success";
 	} else {
-		echo "invalid";
+		if($errorMsg == "") {
+			echo "Something didn't work quite right.";
+		} else {
+			echo $errorMsg;
+		}
 	}
 
  ?>

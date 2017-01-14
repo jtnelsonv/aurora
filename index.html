@@ -144,7 +144,7 @@
                 <div class="timeline-panel reveal">
                     <div class="timeline-heading">
                         <h4 class="timeline-title">Senior Information Controller</h4>
-                        <h5>Aerial Port Operations Center</h5>
+                        <h5>Aerial Terminal Operations Center</h5>
                         <p><small class="text-muted"><i class="fa fa-id-card-o"></i> United States Air Force  <i class="fa fa-angle-double-right"></i> Jan 2016 - Jan 2017</small></p>
                     </div>
                     <div class="timeline-body">
@@ -206,11 +206,15 @@
         <div class="row">
           <div class="col-md-6">
             <form id="contactForm">
-              <input id="name" class="formstyle" type="text" placeholder="Name">
-              <input id="email" class="formstyle" type="email" placeholder="Email">
-              <textarea id="message" class="formstyle" placeholder="Message"></textarea>
+              <input id="name" class="formstyle" type="text" placeholder="Name" required>
+
+              <input id="email" class="formstyle" type="email" placeholder="Email" required>
+
+              <textarea id="message" class="formstyle" placeholder="Message" required></textarea>
+
               <button id="formButton" type="submit" class="btn btn-danger">Submit</button>
-              <div id="formStatus" class="hidden">Message sent!</div>
+
+              <div id="formStatus" class="hidden"></div>
            </form>
 
           </div>

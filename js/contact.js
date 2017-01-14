@@ -1,7 +1,11 @@
 $("#contactForm").submit(function(event) {
-  // cancels the form submission
-  event.preventDefault();
-  submitForm();
+  if (even.isDefaultPrevented()) {
+    formError();
+    formStatus(false, "The form is not filled out properly.");
+  } else {
+      event.preventDefault();
+      submitForm();
+  }
 });
 
 function submitForm() {
@@ -10,6 +14,7 @@ function submitForm() {
   var email = $("#email").val();
   var message = $("#message").val();
 
+//AJAX
   $.ajax( {
     type: "POST",
     url: "../php/process.php",
@@ -17,11 +22,29 @@ function submitForm() {
     success : function(text) {
       if (text == "success") {
         formSuccess();
+      } else {
+        formError();
+        formStatus(false,text);
       }
     }
   });
 }
 
 function formSuccess() {
-  $("#formStatus").removeClass("hidden");
+  $("#contactForm")[0].reset();
+  formStatus(true, "Message sent!");
+}
+
+function formError() {
+  $("#contactForm").removeClass().addClass('text-danger');
+}
+
+function formStatus(valid, msg) {
+  var msgClass;
+  if(valid) {
+    msgClass = "text-success";
+  } else {
+    msgClass = "text-danger";
+  }
+  $("#formStatus").removeClass().addClass(msgClass).text(msg);
 }
