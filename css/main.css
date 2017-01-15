@@ -145,14 +145,22 @@ header hr {
 }
 
 /********* CONTACT SECTION *********/
+#contact {
+  background: url('../images/contact-bg.jpg') fixed no-repeat;
+  background-size: cover;
+}
+
+#contact .page-header {
+  color: #fff;
+}
+
 .formstyle {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
-  background: #fff;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
   border: none;
-  border-bottom: #000 solid 2px;
-  transition: border 0.3s;
 }
 
 .formstyle:focus {
@@ -163,7 +171,6 @@ header hr {
 #formStatus {
   display: block;
   padding: 30px 0px 30px 0px;
-  color: #000;
   font-family: 'Ubuntu',sans-serif;
   font-size: 1.2em;
   font-weight: 600;
