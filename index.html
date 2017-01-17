@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <title>Joshua Nelson - Aurora</title>
 
     <!-- STYLESHEETS -->
@@ -63,8 +64,7 @@
                 </div>
                 <div class="col-md-offset-1 col-md-7">
                     <h2 class="page-header">About Me</h2>
-                    <p>I'm a United States Air Force veteran and recent graduate from Liberty University where I obtained a Bachelor of Science in Applied Web Technologies. I love being able to bring something to fruition through code, however, there is
-                        no denying the trials sometimes involved. But with dedication, passion, and hard work, I will accomplish any task set before me.</p>
+                    <p>I'm a United States Air Force veteran and recent graduate from Liberty University where I obtained a Bachelor of Science in Applied Web Technologies. I love being able to bring something to fruition through code, however, there is no denying the trials sometimes involved. But with dedication, passion, and hard work, I will accomplish any task set before me.</p>
                     <a href="files/Joshua_Nelson_Web_Resume.pdf" class="btn btn-danger btn-lg">Download Resume</a>
                 </div>
             </div>
@@ -117,8 +117,7 @@
                             <p><small class="text-muted"><i class="fa fa-university"></i> Liberty University <i class="fa fa-angle-double-right"></i> 2012 - 2016</small></p>
                         </div>
                         <div class="timeline-body">
-                            <p>Courses in this program cover a wide range of topics, including application programming, database management, networks, web development, and more. Targeted career fields include Web Developer, Software Developer, Mobile Developer,
-                                Network Administrator, and System Administrator.</p>
+                            <p>Courses in this program cover a wide range of topics, including application programming, database management, networks, web development, and more. Targeted career fields include Web Developer, Software Developer, Mobile Developer, Network Administrator, and System Administrator.</p>
                         </div>
                     </div>
                 </li>
@@ -130,9 +129,7 @@
                             <p><small class="text-muted"><i class="fa fa-university"></i> Community College of the Air Force <i class="fa fa-angle-double-right"></i> 2011 - 2016</small></p>
                         </div>
                         <div class="timeline-body">
-                            <p>The Community College of the Air Force is a federally-chartered degree-granting institution that serves the United States Air Force's enlisted total force. We partner with over 108 affiliated Air Force schools, 82 Education
-                                Service Offices located worldwide, and more than 1,500 civilian academic institutions to serve approximately 300,000 active, guard, and reserve enlisted personnel, making CCAF the world's largest community college system.
-                                The college annually awards over 22,000 associate in applied science degrees from 68 degree programs.</p>
+                            <p>The Community College of the Air Force is a federally-chartered degree-granting institution that serves the United States Air Force's enlisted total force. We partner with over 108 affiliated Air Force schools, 82 Education Service Offices located worldwide, and more than 1,500 civilian academic institutions to serve approximately 300,000 active, guard, and reserve enlisted personnel, making CCAF the world's largest community college system. The college annually awards over 22,000 associate in applied science degrees from 68 degree programs.</p>
                         </div>
                     </div>
                 </li>
@@ -152,8 +149,7 @@
                             <p><small class="text-muted"><i class="fa fa-id-card-o"></i> United States Air Force  <i class="fa fa-angle-double-right"></i> Jan 2016 - Jan 2017</small></p>
                         </div>
                         <div class="timeline-body">
-                            <p>Gather, process, and disseminate all information pertaining to aerial port operations. Ensure each terminal work center is given the necessary information to effectively accomplish the assigned mission by working closely with
-                                the C2 agency, base operations, maintenance control, other base agencies, and up-line/down-line station ATOCs. Closely monitor all work center SOEs to ensure established timelines are being met to prevent aircraft delays.</p>
+                            <p>Gather, process, and disseminate all information pertaining to aerial port operations. Ensure each terminal work center is given the necessary information to effectively accomplish the assigned mission by working closely with the C2 agency, base operations, maintenance control, other base agencies, and up-line/down-line station ATOCs. Closely monitor all work center SOEs to ensure established timelines are being met to prevent aircraft delays.</p>
                         </div>
                     </div>
                 </li>
@@ -166,9 +162,7 @@
                             <p><small class="text-muted"><i class="fa fa-id-card-o"></i> United States Air Force  <i class="fa fa-angle-double-right"></i> Nov 2014 - Jan 2016</small></p>
                         </div>
                         <div class="timeline-body">
-                            <p>Classify, record, and summarize numerical and financial data to compile and keep financial records, using journals, ledgers, and computers. Compile statistical, financial, accounting, or auditing reports and tables pertaining
-                                to such matters as cash receipts, expenditures, accounts payable and receivable, and profits and losses. Direct, track, and enforce Passenger Service training policies in accordance with Department of Defense standards
-                                and Air Force Instructions.</p>
+                            <p>Classify, record, and summarize numerical and financial data to compile and keep financial records, using journals, ledgers, and computers. Compile statistical, financial, accounting, or auditing reports and tables pertaining to such matters as cash receipts, expenditures, accounts payable and receivable, and profits and losses. Direct, track, and enforce Passenger Service training policies in accordance with Department of Defense and Air Force Instructions.</p>
                         </div>
                     </div>
                 </li>
@@ -212,18 +206,20 @@
             </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <form id="contactForm" data-toggle="validator">
-                        <input id="name" class="formstyle" type="text" placeholder="Name" required>
 
-                        <input id="email" class="formstyle" type="email" placeholder="Email" required>
+                  <!-- CONTACT FORM -->
+                    <form id="contactForm" method="post" action="php/mailer.php">
+                        <input id="name" name="name" class="formstyle" type="text" placeholder="Name" required>
 
-                        <textarea id="message" class="formstyle" placeholder="Message" rows="5" required></textarea>
+                        <input id="email" name="email" class="formstyle" type="email" placeholder="Email" required>
+
+                        <textarea id="message" name="message" class="formstyle" placeholder="Message" rows="5" required></textarea>
 
                         <button id="formButton" type="submit" form="contactForm" class="btn btn-danger">Submit</button>
 
-                        <div id="formStatus"></div>
+                        <!-- FORM MESSAGES PASSED FROM MAILER.PHP OR AJAX.JS -->
+                        <div id="messages" class="text-center"></div>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -253,8 +249,7 @@
     <script src="js/reveal.js"></script>
     <script src="js/lettering.js"></script>
     <script src="js/carousel.js"></script>
-    <script src="js/validator.min.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/ajax.js"></script>
 
 </body>
 
