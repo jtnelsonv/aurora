@@ -16,6 +16,17 @@ nav, h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
+.link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #ff0000;
+  transition: ease-in-out 0.7s;
+  -webkit-transition: ease-in-out 0.7s;
+}
+
 
 /********* NAVIGATION *********/
 
@@ -80,6 +91,30 @@ header h3 {
 
 header hr {
     width: 40%;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-animation: arrow 0.8s ease 0.2s infinite alternate;
+          animation: arrow 0.8s ease 0.2s infinite alternate;
+}
+
+@-webkit-keyframes arrow {
+  0% {color: #fff; bottom: 20px;}
+  25% {color: #ffcdcd; bottom: 15px;}
+  50% {color: #ff8585; bottom: 10px;}
+  75% {color: #ff4a4a; bottom: 5px;}
+  100% {color: #f00; bottom: 0px;}
+}
+
+@keyframes arrow {
+  0% {color: #fff; bottom: 20px;}
+  25% {color: #ffcdcd; bottom: 15px;}
+  50% {color: #ff8585; bottom: 10px;}
+  75% {color: #ff4a4a; bottom: 5px;}
+  100% {color: #f00; bottom: 0px;}
 }
 
 
@@ -151,7 +186,10 @@ header hr {
 /********* QUOTE SECTION *********/
 
 #quotes {
-    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30em;
     color: #fff;
 }
 
@@ -353,29 +391,22 @@ header hr {
 
 @media (max-width: 767px) {
     ul.timeline:before {
-        left: 40px;
+        display: none;
     }
     ul.timeline>li>.timeline-panel {
-        margin-left: 45px;
-        width: calc(100% - 120px);
-        width: -webkit-calc(100% - 120px);
+        margin: 0 auto;
+        left: 0em;
+        width: 100%;
     }
     ul.timeline>li>.timeline-badge {
-        left: 15px;
-        margin-left: 0;
-        top: 16px;
+        display: none;
+
     }
     ul.timeline>li>.timeline-panel:before {
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto;
+        display: none;
     }
     ul.timeline>li>.timeline-panel:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto;
+        display: none;
     }
 }
 

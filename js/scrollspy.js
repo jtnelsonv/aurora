@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Add scrollspy to <body>
     $('body').scrollspy({
-        target: ".navbar",
+        target: ".navbar, .arrow",
         offset: 40
     });
     // Add smooth scrolling on all links inside the navbar
@@ -24,5 +24,21 @@ $(document).ready(function() {
                 window.location.hash = hash;
             });
         } // End if
+    });
+
+    //This targets down arrow located in header
+    $("#arrow a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+
+                window.location.hash = hash;
+            });
+        }
     });
 });
