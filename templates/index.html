@@ -10,27 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Joshua Nelson - Web Developer</title>
+    <title>Joshua Nelson - Developer</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    
     <!--[if lt IE 9] -->
     <!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
     <!-- [endif] -->
 
     <!-- FAVICONS -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" href="images/icons/favicons/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="images/icons/favicons/favicon-16x16.png" sizes="16x16" />
-    <link rel="manifest" href="images/icons/favicons/manifest.json" />
-    <link rel="mask-icon" href="images/icons/favicons/safari-pinned-tab.svg" />
-    <link rel="shortcut icon" href="images/icons/favicons/favicon.ico" />
-    <meta name="msapplication-config" content="images/icons/favicons/browserconfig.xml" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/icons/favicons/apple-touch-icon.png') }}" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicons/favicon-32x32.png') }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicons/favicon-16x16.png') }}" sizes="16x16" />
+    <link rel="manifest" href="{{ url_for('static', filename='images/icons/favicons/manifest.json') }}" />
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/icons/favicons/safari-pinned-tab.svg') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icons/favicons/favicon.ico') }}" />
+    <meta name="msapplication-config" content="{{ url_for('static', filename='images/icons/favicons/browserconfig.xml') }}" />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- GOOGLE ANALYTICS -->
@@ -56,7 +57,7 @@
                 <button type="button" class="navbar-toggle collapsed mobile-ham" data-toggle="collapse" data-target="#mobile-menu">
           <span class="fa fa-bars"></span>
           </button>
-                <a href="index.html" class="navbar-brand aurora">AURORA</a>
+                <a href="/" class="navbar-brand aurora">AURORA</a>
             </div>
             <!-- NAV LINKS -->
             <div class="collapse navbar-collapse" id="mobile-menu">
@@ -76,7 +77,7 @@
             <div class="header-cell">
                 <h1>JOSHUA NELSON</h1>
                 <hr />
-                <h3>WEB DEVELOPER</h3>
+                <h3>DEVELOPER</h3>
                 <div id="arrow" class="arrow">
                   <a href="#about"><span class="arrow glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
                 </div>
@@ -89,12 +90,12 @@
         <div class="container lg-padding reveal">
             <div class="row">
                 <div class="col-md-4 bg-black img-border">
-                    <img src="images/me.jpg" alt="Joshua" />
+                    <img src="{{ url_for('static', filename='images/me.jpg') }}" alt="Joshua" />
                 </div>
                 <div class="col-md-offset-1 col-md-7">
                     <h2 class="page-header">About Me</h2>
                     <p>I'm a United States Air Force veteran and recent graduate from Liberty University where I obtained a Bachelor of Science in Applied Web Technologies. I love being able to bring something to fruition through code, however, there is no denying the trials sometimes involved. But with dedication, passion, and hard work, I will accomplish any task set before me.</p>
-                    <a href="files/Joshua_Nelson_Web_Resume.pdf" class="btn btn-danger btn-lg btn-resume">Download Resume</a>
+                    <a href="{{ url_for('static', filename='files/Joshua_Nelson_Web_Resume.pdf') }}" class="btn btn-danger btn-lg btn-resume">Download Resume</a>
                     <a href="https://github.com/jtnelsonv" target="_blank" class="btn btn-danger btn-lg btn-icon"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/joshuanelsonme" target="_blank" class="btn btn-danger btn-lg btn-icon"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
                 </div>
@@ -107,22 +108,22 @@
         <div class="container lg-padding">
             <div class="row">
                 <div id="skill-lang" class="col-md-3 side-padding duration-reveal">
-                    <img class="center-block" src="images/icons/Code-64.png" alt="Languages" />
+                    <img class="center-block" src="{{ url_for('static', filename='images/icons/Code-64.png') }}" alt="Languages" />
                     <h5>Languages Used</h5>
                     <p>HTML5, CSS3, JavaScript, PHP, MySQL, Java, Perl, C#, VB.Net</p>
                 </div>
                 <div id="skill-frame" class="col-md-3 side-padding duration-reveal">
-                    <img class="center-block" src="images/icons/Outline-64.png" alt="Frameworks / APIs" />
+                    <img class="center-block" src="{{ url_for('static', filename='images/icons/Outline-64.png') }}" alt="Frameworks / APIs" />
                     <h5>Frameworks/APIs</h5>
                     <p>Bootstrap, Materialize, Skeleton, jQuery, AngularJS, Firebase</p>
                 </div>
                 <div id="skill-tools" class="col-md-3 side-padding duration-reveal">
-                    <img class="center-block" src="images/icons/Maintenance-64.png" alt="Tools" />
+                    <img class="center-block" src="{{ url_for('static', filename='images/icons/Maintenance-64.png') }}" alt="Tools" />
                     <h5>Tools</h5>
                     <p>Atom Editor, NetBeans, Visual Studio, Git, FileZilla, Photoshop</p>
                 </div>
                 <div id="skill-env" class="col-md-3 side-padding duration-reveal">
-                    <img class="center-block" src="images/icons/Server-64.png" alt="Environments" />
+                    <img class="center-block" src="{{ url_for('static', filename='images/icons/Server-64.png') }}" alt="Environments" />
                     <h5>Environments</h5>
                     <p>Linux (various distros), Windows, macOS, VPS Deployment</p>
                 </div>
@@ -265,13 +266,12 @@
                 <div class="col-md-8 col-md-offset-2">
 
                   <!-- CONTACT FORM -->
-                    <form id="contactForm" method="post" action="php/mailer.php" class="duration-reveal">
-                        <input id="name" name="name" class="formstyle" type="text" placeholder="Name" required>
+                    <form id="contactForm" method="post" class="duration-reveal">
 
-                        <input id="email" name="email" class="formstyle" type="email" placeholder="Email" required>
-
-                        <textarea id="message" name="message" class="formstyle" placeholder="Message" rows="5" required></textarea>
-
+                       {{ form.csrf_token }}
+                       {{ form.name(class="formstyle", placeholder="Name") }}
+                       {{ form.email(class="formstyle", placeholder="Email") }}
+                       {{ form.message(class="formstyle", placeholder="Message") }}          
                         <button id="formButton" type="submit" form="contactForm" class="btn btn-danger">Send!</button>
 
                         <!-- FORM MESSAGES PASSED FROM MAILER.PHP OR AJAX.JS -->
@@ -301,7 +301,7 @@
           <h2 class="text-center">Sources</h2>
         </div>
         <div class="modal-content">
-          <a href="http://www.vultr.com/?ref=6986618" target="_blank"><img src="images/vultr.png" alt="Vultr" /></a>
+          <a href="http://www.vultr.com/?ref=6986618" target="_blank"><img src="{{ url_for('static', filename='images/vultr.png') }}" alt="Vultr" /></a>
           <ul class="fa-ul">
             <li><i class="fa-li fa fa-check-square" aria-hidden="true"></i> Favorite icon made by <a href="http://www.flaticon.com/authors/madebyoliver" target="_blank">Madebyoliver</a> from <a href="http://www.flaticon.com" target="_blank">www.flaticon.com</a> and is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0 BY</a></li>
             <li><i class="fa-li fa fa-check-square" aria-hidden="true"></i> Other icons provided by <a href="http://fontawesome.io" target="_blank">Font Awesome by Dave Gandy</a></li>
@@ -315,12 +315,43 @@
     <!-- SCRIPT CDNs -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
     <!-- LOCAL SCRIPTS -->
-    <script src="js/jquery.lettering-0.6.1.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.lettering-0.6.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (e) {
+                var url = "{{ url_for('process') }}"; // send the form data here.
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $('form').serialize(), // serializes the form's elements.
+                    success: function (data) {
+                        // display the returned data in the console.
+                        $.each(data, function (key, val) {
+                            $('#messages').text(val);
+                        });
+
+                        $('#name').val('');
+                        $('#email').val('');
+                        $('#message').val('');
+                    }
+                });
+                e.preventDefault(); // block the traditional submission of the form.
+            });
+            // Inject our CSRF token into our AJAX request.
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", "{{ form.csrf_token._value() }}")
+                    }
+                }
+            })
+        });
+    </script>
 
 </body>
 
