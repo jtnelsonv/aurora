@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from flask import Flask, render_template, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, validators
