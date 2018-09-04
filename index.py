@@ -49,6 +49,6 @@ def process():
     
     return jsonify(form.errors)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# Needed if not on PythonAnywhere
+# if __name__ == '__main__':
+#     app.run(debug=True)
