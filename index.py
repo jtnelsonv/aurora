@@ -7,7 +7,7 @@ from wtforms.fields.html5 import EmailField
 import smtplib, re
 
 app = Flask(__name__)
-app.secret_key = '309h4u(b@62**is+wy62(kbo&l@4yo412_8(fr+eq8=&si)!=5'
+app.secret_key = 'xxxxxxx'
 
 class EmailForm(FlaskForm):
     name = StringField('Name', [
@@ -42,8 +42,8 @@ def process():
         fullMsg = form.name.data + '\n\n' + form.email.data + '\n\n' + form.message.data
         server = smtplib.SMTP('in-v3.mailjet.com', 587)
         server.starttls()
-        server.login('9b351503bed278b872c2b0452b1cbae6', '68003bc5cd9bc09e075dc3b02308381f')
-        server.sendmail('jtnelson@protonmail.com', 'jtnelson@protonmail.com', fullMsg)
+        server.login('xxxxx', 'xxxxx')
+        server.sendmail('xxxxxx', 'xxxxxx', fullMsg)
         server.quit()
         return jsonify({'message': 'Thank you for contacting me!'})
     
